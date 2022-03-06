@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace _8086Sim
 {
@@ -15,10 +16,11 @@ namespace _8086Sim
         static void Main(string[] args)
         {
             InitializeRegistry();
+            PrintRegistry();
 
-            
-          
 
+            Console.WriteLine("Please, provide instruction:");
+            Console.WriteLine($"These can be as follows: {REGISTRY_COMMANDS}");
             var instruction = Console.ReadLine().ToUpperInvariant();
             if(!REGISTRY_COMMANDS.Contains(instruction))
                 throw new ArgumentException();
@@ -54,22 +56,21 @@ namespace _8086Sim
             REGISTRY_TYPES.ForEach(type => {
 
                 var hex = ProvideHex(type);
-                REGISTRY_VALUES.Add(typ, string.Empty);
-                Console.WriteLine(string.Empty);
+                REGISTRY_VALUES.Add(type, string.Empty);
 
             });
         }
 
         private static string ProvideHex(string type)
         {
-            string result;
+            string result = string.Empty;
             string input;
 
             do
             {
                 try 
                 {
-                    Console.WriteLine($"Please, provide value forn {type}");
+                    Console.WriteLine($"Please, provide value for {type}");
                     Console.WriteLine("Provide it in hexademical value.");
                     input = Console.ReadLine();
 
@@ -89,12 +90,19 @@ namespace _8086Sim
                     Console.WriteLine("Please, try again.");
                 }
 
-            } while (result);
+            } while (result == string.Empty);
 
             return result;
         }
 
-
+        private static void PrintRegistry()
+        {
+            Console.WriteLine("The current state of registry is as follows:");
+            foreach (var key in REGISTRY_VALUES.Keys)
+            {
+                Console.WriteLine($"{key} : {REGISTRY_VALUES[key]}");
+            }
+        }
 
     }
 }
