@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+//mirek.gajda@gmail.com
 namespace _8086Sim
 {
     class Program
@@ -25,6 +25,7 @@ namespace _8086Sim
             if(!REGISTRY_COMMANDS.Contains(instruction))
                 throw new ArgumentException();
 
+            Console.WriteLine($"Picked instruction: {instruction}");
             Console.WriteLine("Please, provide value of first registry in hexademical value.");
             var firstReg = Console.ReadLine().ToUpperInvariant();
 
