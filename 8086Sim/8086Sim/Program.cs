@@ -22,14 +22,14 @@ namespace _8086Sim
             Console.WriteLine("Please, provide instruction:");
             Console.WriteLine($"These can be as follows: {REGISTRY_COMMANDS}");
             var instruction = Console.ReadLine().ToUpperInvariant();
-            if(!REGISTRY_COMMANDS.Contains(instruction))
+            if (!REGISTRY_COMMANDS.Contains(instruction))
                 throw new ArgumentException();
 
             Console.WriteLine($"Picked instruction: {instruction}");
             Console.WriteLine("Please, provide value of first registry in hexademical value.");
             var firstReg = Console.ReadLine().ToUpperInvariant();
 
-            if(!REGISTRY_VALUES.ContainsKey(firstReg))
+            if (!REGISTRY_VALUES.ContainsKey(firstReg))
                 throw new ArgumentException();
 
             Console.WriteLine("Please, provide value of second registry in hexademical value.");
@@ -38,15 +38,27 @@ namespace _8086Sim
             if (!REGISTRY_VALUES.ContainsKey(secondReg))
                 throw new ArgumentException();
 
+            if (instruction == "MOV")
+            {
+                REGISTRY_VALUES[secondReg] = REGISTRY_VALUES[firstReg];
+            } else
+            {
+                var temp = REGISTRY_VALUES[firstReg];
+                REGISTRY_VALUES[firstReg] = REGISTRY_VALUES[secondReg];
+                REGISTRY_VALUES[secondReg] = temp;
+
+            }
 
 
         }
 
-        private static void VerifyHexValue(string[] splitInput)
+        private static void VerifyHexValue(char[] splitInput)
         {
             for (int i = 0; i < splitInput.Length; i++)
             {
-                if (!int.TryParse(splitInput[i], out int _) || !HEX_LETTERS.Contains(splitInput[i].ToUpper()))
+                var one = int.TryParse(splitInput[i].ToString(), out int _);
+                var two = HEX_LETTERS.Contains(splitInput[i].ToString().ToUpper());
+                if (!one && !two)
                     throw new ArgumentException($"Character number {i} is invalid!");
             }
 
@@ -78,7 +90,7 @@ namespace _8086Sim
                     if (input.Length != 2)
                         throw new ArgumentException("Invalid input length!");
 
-                    var splitInput = input.Split();
+                    var splitInput = input.ToCharArray();
 
                     VerifyHexValue(splitInput);
 

@@ -1,0 +1,14 @@
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.exe
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.deps.json
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.runtimeconfig.json
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.runtimeconfig.dev.json
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.dll
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\bin\Debug\netcoreapp3.1\8086Sim.pdb
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.csproj.AssemblyReference.cache
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.GeneratedMSBuildEditorConfig.editorconfig
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.AssemblyInfoInputs.cache
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.AssemblyInfo.cs
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.csproj.CoreCompileInputs.cache
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.dll
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.pdb
+D:\Users\Lukasz.Bielenin\source\repos\8086Sim\8086Sim\8086Sim\obj\Debug\netcoreapp3.1\8086Sim.genruntimeconfig.cache
